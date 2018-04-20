@@ -1,4 +1,4 @@
-from sys import argv
+
 import csv
 import requests
 import bs4
@@ -10,6 +10,7 @@ def scrape(borough, block, lot, largeFile):
     url = "http://a836-acris.nyc.gov/DS/DocumentSearch/BBLResult"
     headers = {'User-Agent': 'Mozilla/5.0'}
     count = 0
+    bname = 0
     if borough=='0':
         bname = 'STATEN ISLAND / RICHMOND'
     elif borough=='1':
